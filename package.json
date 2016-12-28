@@ -1,0 +1,27 @@
+{
+  "name": "namechanger",
+  "version": "0.0.0",
+  "description": "Change your name on Twitter automatically, why would you do this I do not know",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/briandeheus/namechanger.git"
+  },
+  "bin": {
+    "namechanger": "./index.js"
+  },
+  "keywords": [
+    "whimsical"
+  ],
+  "author": "Brian de Heus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/briandeheus/namechanger/issues"
+  },
+  "homepage": "https://github.com/briandeheus/namechanger#readme",
+  "dependencies": {
+    "js-yaml": "^3.7.0",
+    "minimist": "^1.2.0",
+    "twitter": "^1.7.0"
+  }
+}

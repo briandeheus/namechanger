@@ -1,0 +1,6 @@
+[Unit]
+Description=namechanger
+
+[Service]
+Restart=on-failure
+ExecStart=/usr/bin/namechanger -c /etc/namechanger.yml

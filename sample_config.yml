@@ -1,0 +1,12 @@
+# Interval at which to change your name at.
+updateInterval: 1800
+
+# Base name to be used for your profile
+baseName: "John"
+
+# Twitter settings.
+twitter:
+  consumerSecret: ""
+  accessTokenKey: ""
+  accessTokenSecret: ""
+  consumerKey: ""
