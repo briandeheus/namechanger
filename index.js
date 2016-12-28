@@ -23,7 +23,7 @@ let adjectives        = [];
 
 const loadAdjective = () => {
 
-    const adjs = fs.readFileSync('./adjectives.txt').toString().split('\n');
+    const adjs = fs.readFileSync(`${__dirname}/adjectives.txt`).toString().split('\n');
     adjectives = adjs.reduce((prev, adj) => {
 
         if (constructName(adj).length > MAX_NAME_LENGTH) {
