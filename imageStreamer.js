@@ -143,8 +143,7 @@ const beginProcess = () => {
             return;
         }
 
-        results = {};
-        console.error('Hehe');
+        console.info('Done updating');
 
     });
 
