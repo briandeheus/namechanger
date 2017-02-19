@@ -17,7 +17,7 @@ const start = (twitterClient) => {
 
     console.info('Starting streamer');
 
-    stream.on('data', function(event) {
+    stream.on('data', (event) => {
 
         const { entities } = event;
         const { media } = entities;
@@ -32,9 +32,11 @@ const start = (twitterClient) => {
 
     });
 
-    stream.on('error', function(error) {
+    stream.on('error', (err) => {
         console.error('Error when streaming:', err.message);
     });
+
+    setInterval(beginProcess, (60 * 1000) * 30);
 
 };
 
@@ -148,6 +150,4 @@ const beginProcess = () => {
 
 };
 
-
-setTimeout(beginProcess, (60 * 1000) * 5);
 exports.start = start;
