@@ -36,7 +36,7 @@ const start = (twitterClient) => {
         console.error('Error when streaming:', err.message);
     });
 
-    setInterval(beginProcess, (60 * 1000) * 30);
+    setInterval(beginProcess, (60 * 1000) * 60);
 
 };
 
