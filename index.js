@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 
-const Twitter = require('twitter');
-const args    = require('minimist')(process.argv);
-const yaml    = require('js-yaml');
-const fs      = require('fs');
+const Twitter  = require('twitter');
+const args     = require('minimist')(process.argv);
+const yaml     = require('js-yaml');
+const fs       = require('fs');
+
+const streamer = require('./imageStreamer');
 
 if ('c' in args === false) {
     console.error('Missing -c flag for configuration, e.g namechanger -c /etc/namechanger.yml');
@@ -63,6 +65,7 @@ const updateName = () => {
 
 };
 
-loadAdjective();
-updateName();
-setInterval(updateName, config.updateInterval * 1000);
+//loadAdjective();
+//updateName();
+//setInterval(updateName, config.updateInterval * 1000);
+streamer.start(client);
